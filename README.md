@@ -56,3 +56,24 @@ This code is relying on the work of the following projects:
 * [ekphrasis](https://github.com/cbaziotis/ekphrasis)
 
 Many thanks to my supervisor [Osmar R. Zaïane](http://webdocs.cs.ualberta.ca/~zaiane/) for supporting me working on this shared task. 
+
+
+
+## following the below process
+### dependencies installation
+```
+pip install --ignore-installed allennlp
+
+rm -rf /home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/numpy
+pip install numpy
+```
+
+### to get glove.840B.300d.txt
+```
+wget "http://nlp.stanford.edu/data/glove.840B.300d.zip"
+
+```
+
+```
+python3 trainer_hrlce.py -glovepath glove.840B.300d.txt
+```
