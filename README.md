@@ -71,9 +71,20 @@ pip install ekphrasis
 ### to get glove.840B.300d.txt
 ```
 wget "http://nlp.stanford.edu/data/glove.840B.300d.zip"
-
+unzip glove.840B.300d.zip
+```
+### to get pytorch_model.bin
+```
+wget "https://www.dropbox.com/s/q8lax9ary32c7t9/pytorch_model.bin?dl=0#"
+mv pytorch_model.bin\?dl\=0 pytorch_model.bin
 ```
 
+
+
+### to get vocabulary.json
+
+
+### to run
 ```
 python3 trainer_hrlce.py -glovepath glove.840B.300d.txt
 ```
