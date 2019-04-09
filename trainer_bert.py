@@ -46,6 +46,13 @@ parser.add_argument('-loss', default='ce', type=str,
                     help="ce or focal ")
 parser.add_argument('-tokentype', default='True', type=str,
                     help="post name")
+parser.add_argument('-half', default = 'True', type=str,
+                    help='half presion')
+parser.add_argument('-size', default = 'base', type=str,
+                    help='bert model')
+parser.add_argument('-padlen', default = 0, type=int,
+                    help='padding size, default is 0')
+
 opt = parser.parse_args()
 
 if opt.half == 'True':
