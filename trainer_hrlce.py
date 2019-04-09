@@ -50,7 +50,7 @@ parser.add_argument('-loss', default='ce', type=str,
                     help="ce or focal ")
 parser.add_argument('-dim', default=1500, type=int,
                     help="post name")
-parser.add_argument('-glovepath', type=int,
+parser.add_argument('-glovepath', type=str,
                     help="please specify the path to a GloVe 300d emb file")
 opt = parser.parse_args()
 
@@ -87,8 +87,8 @@ random.seed(RANDOM_SEED)
 
 GLOVE_EMB_PATH = opt.glovepath
 
-options_file = "https://s3-us-west-2.amazonaws.com/allennlp/model/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_options.json"
-weight_file = "https://s3-us-west-2.amazonaws.com/allennlp/model/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5"
+options_file = "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_options.json"
+weight_file = "https://s3-us-west-2.amazonaws.com/allennlp/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5"
 
 elmo = Elmo(options_file, weight_file, 2, dropout=0).cuda()
 elmo.eval()
