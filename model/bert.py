@@ -9,6 +9,7 @@ import torch.nn.functional as F
 import torch
 from torch.autograd import Variable
 
+NUM_EMO = 4
 
 class BERT_classifer(PreTrainedBertModel):
     """
