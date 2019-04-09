@@ -1,0 +1,1 @@
+python3 trainer_hrlce.py -glovepath glove.840B.300d.txt &> hrlce.log &
