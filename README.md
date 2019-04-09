@@ -1,10 +1,7 @@
-# ANA at SemEval-2019 Task 3 
+# SemEval-2019 Task 3 
 
-This repo contains the code for our paper,
- 
- *ANA at SemEval-2019 Task 3: Contextual Emotion detection in Conversations through hierarchical LSTMs and BERT*
+SemEval-2019 Task 3: Contextual Emotion detection in Conversations through hierarchical LSTMs and BERT*
 
-[Automated Nanny Agent (ANA)](https://www.amii.ca/ana-automated-nanny-agent/) is a project founded by [Alberta Machine Intelligence Institute (AMII)](https://www.amii.ca/). For more details, please visit the webpages.
 
 An overview of the proposed *HRLCE* Model:
 
