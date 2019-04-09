@@ -66,6 +66,9 @@ pip install --ignore-installed allennlp
 
 rm -rf /home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/numpy
 pip install numpy
+pip install emoji
+pip install text_unidecode
+pip install ekphrasis
 ```
 
 ### to get glove.840B.300d.txt
