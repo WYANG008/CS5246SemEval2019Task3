@@ -40,18 +40,18 @@ parser.add_argument('-flat', default=1, type=float,
                     help="flatten para")
 parser.add_argument('-focal', default=2, type=int,
                     help="gamma value for focal loss, default 2")
-parser.add_argument('-w', default=2, type=int,
+parser.add_argument('-w', default=1, type=int,
                     help="patience ")
 parser.add_argument('-loss', default='ce', type=str,
                     help="ce or focal ")
 parser.add_argument('-tokentype', default='True', type=str,
                     help="post name")
-parser.add_argument('-half', default = 'True', type=str,
+parser.add_argument('-half', default = 'False', type=str,
                     help='half presion')
 parser.add_argument('-size', default = 'base', type=str,
                     help='bert model')
-parser.add_argument('-padlen', default = 0, type=int,
-                    help='padding size, default is 0')
+parser.add_argument('-padlen', default = 30, type=int,
+                    help='padding size, default is 30')
 
 opt = parser.parse_args()
 
@@ -339,6 +339,7 @@ def main():
 
         # construct data loader
         train_data_set = DataSet(X_train, y_train, SENT_PAD_LEN)
+        
         train_data_loader = DataLoader(train_data_set, batch_size=BATCH_SIZE, shuffle=True)
 
         dev_data_set = DataSet(X_dev, y_dev, SENT_PAD_LEN)
