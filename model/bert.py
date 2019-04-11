@@ -1,6 +1,7 @@
 import torch
 from pytorch_pretrained_bert import BertTokenizer, BertForSequenceClassification
-from pytorch_pretrained_bert.modeling import PreTrainedBertModel, BertModel
+#from pytorch_pretrained_bert.modeling import PreTrainedBertModel, BertModel
+from pytorch_pretrained_bert.modeling import BertPreTrainedModel, BertModel
 
 
 import numpy as np
@@ -11,7 +12,7 @@ from torch.autograd import Variable
 
 NUM_EMO = 4
 
-class BERT_classifer(PreTrainedBertModel):
+class BERT_classifer(BertPreTrainedModel):
     """
     A Hierarchical LSTM with for 3 turns dialogue
     """
@@ -20,7 +21,7 @@ class BERT_classifer(PreTrainedBertModel):
 
         self.num_labels = NUM_EMO
         self.bert = BertModel(config)
-        self.dropout = nn.Dropout(0.1)
+        self.dropout = nn.Dropout(0.2)
         self.apply(self.init_bert_weights)
         self.bert_out_dim = None
         self.out2label = None
