@@ -41,6 +41,9 @@ Another note, in order to get your submissions measured the same way as that fro
 It is slightly different than using the micro F scores of the three emotion categories directly. 
 
 
+## Related Work
+A related work using RCNN can be found [here](https://github.com/zhongpeixiang/SemEval2019-Task3-EmotionDetection).
+
 ## Acknowledgement
 This code is relying on the work of the following projects:
 
